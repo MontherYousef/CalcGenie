@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px;
+}
+
+.input {
+    width: 100%;
+    height: 60px;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* تخصيص الألوان لأزرار AC و DEL */
+button[data-value="AC"] {
+    background-color: #f44336; /* أحمر */
+    color: white;
+}
+
+button[data-value="AC"]:hover {
+    background-color: #d32f2f;
+}
+
+button[data-value="DEL"] {
+    background-color: #ff9800; /* برتقالي */
+    color: white;
+}
+
+button[data-value="DEL"]:hover {
+    background-color: #f57c00;
+}
+
+/* تخصيص الألوان للأزرار الخاصة بالعمليات */
+.operator {
+    background-color: #f68e4f;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ff7043;
+}
+
+.operator[data-value="+"] {
+    background-color: #ffab00;
+}
+
+.operator[data-value="-"] {
+    background-color: #d32f2f;
+}
+
+.operator[data-value="*"] {
+    background-color: #1976d2;
+}
+
+.operator[data-value="/"] {
+    background-color: #388e3c;
+}
+
+.operator[data-value="%"] {
+    background-color: #9c27b0;
+}
+
+.operator[data-value="="] {
+    background-color: #607d8b;
+}
+
+.operator:hover {
+    background-color: #ff7043;
+}
+
+.btn {
+    background-color: #e0e0e0;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+button:disabled {
+    background-color: #d0d0d0;
+    cursor: not-allowed;
+}
